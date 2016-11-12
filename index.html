@@ -31,7 +31,7 @@
 			var food = {x: 0, y: 0}
 			var snake;
 			var score = 0;
-			var startLen = 3;
+			var startLen = 5;
 			var snake_size = 40;
 			var snake_speed = 40;
 			var interval = 85;
@@ -187,22 +187,24 @@
 				var locIncorrect = false;
 
 				do{
+					locIncorrect = false;
 					food.x = Math.round(Math.random() * (width/snake_size)) * snake_size;
 					food.y = Math.round(Math.random() * (height/snake_size)) * snake_size;
 					for (let i = 0; i < snake.length; i++)
-						if (snake[i].x == food.x && snake[i].y == food.y)
+						if (snake[i].x == food.x && snake[i].y == food.y){
 							locIncorrect = true;
-							break;			
+							break;
+						}			
 				}
 				while(locIncorrect)
 
-				if (food.x == 0)
+				if (food.x <= 0)
 					food.x += snake_size;
-				else if (food.x == width)
+				else if (food.x >= width)
 					food.x -= snake_size;
-				else if (food.y == 0)
+				else if (food.y <= 0)
 					food.y += snake_size;
-				else if (food.y == height)
+				else if (food.y >= height)
 					food.y -= snake_size;
 
 				console.log('Food:\n'+food.x+' : ' + food.y)
@@ -231,6 +233,7 @@
 
 
 			$(canvas).click(function(e){
+				if (!snake[0]) return;
 				mousePos = getMousePos(canvas, e);
 				if (snake[0].x < mousePos.x && direction != KEYS.LEFT && direction != KEYS.RIGHT)
 					direction = KEYS.RIGHT;
