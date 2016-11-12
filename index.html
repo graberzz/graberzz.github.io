@@ -196,6 +196,15 @@
 				}
 				while(locIncorrect)
 
+				if (food.x == 0)
+					food.x += snake_size;
+				else if (food.x == width)
+					food.x -= snake_size;
+				else if (food.y == 0)
+					food.y += snake_size;
+				else if (food.y == height)
+					food.y -= snake_size;
+
 				console.log('Food:\n'+food.x+' : ' + food.y)
 			}
 
