@@ -34,7 +34,7 @@
 			var startLen = 3;
 			var snake_size = 40;
 			var snake_speed = 40;
-			var interval = 80;
+			var interval = 85;
 			var direction;
 			var opp_dirs = {
 				left: 'right',
@@ -45,8 +45,6 @@
 			var timer;
 			context.strokeStyle = 'lime';
 
-
-			//--------BASE SNAKE-------------
 
 			function initialize(){
 				score = 0;
@@ -88,20 +86,28 @@
 						context.fillRect(snake[i].x, snake[i].y, snake_size, snake_size);
 						context.strokeRect(snake[i].x, snake[i].y, snake_size, snake_size);
 					}
+
 					if (collision()){
 						$('#new_game').removeAttr('hidden');
 						clearCanvas();
 						return;
 					}
+
 					if (foodEaten()){
 						spawnFood();
 						score+=10;
+
+						if (score % 100 == 0 && interval > 50)
+							interval -= 10;
+
 						$('#score').text(score);
 						growSnake();
 					}		
 					moveSnake();
+
 				}, interval);
 			}
+
 
 			function moveSnake(){
 				switch(direction){
@@ -122,17 +128,21 @@
 
 			function growSnake(){
 				var block = {
-					x: -100,
-					y: -100
+					x: 10,
+					y: 10,
 				}
 				snake.push(block);
 			}
+
+
 			function clearCanvas(){
 				var fillStyle = context.fillStyle;
 				context.fillStyle = 'white';
 				context.fillRect(0, 0, width, height);
 				context.fillStyle = fillStyle;
 			}
+
+
 			function collision(){
 				for (let i = 2; i < snake.length; i++)
 					if (snake[0].x == snake[i].x && snake[0].y == snake[i].y)
@@ -142,6 +152,8 @@
 
 				return false;
 			}
+
+
 			//--------UPDATE DIRECTION--------
 			$(document).keydown(function(e){
 				key = e.which;
@@ -175,7 +187,7 @@
 
 				do{
 					food.x = Math.round(Math.random() * (width/snake_size)) * snake_size;
-					food.y = Math.round(Math.random() * (width/snake_size)) * snake_size;
+					food.y = Math.round(Math.random() * (height/snake_size)) * snake_size;
 					for (let i = 0; i < snake.length; i++)
 						if (snake[i].x == food.x && snake[i].y == food.y)
 							locIncorrect = true;
@@ -183,8 +195,6 @@
 				}
 				while(locIncorrect)
 
-				food.x = Math.round(Math.random() * (width/snake_size)) * snake_size,
-				food.y = Math.round(Math.random() * (height/snake_size)) * snake_size,
 				console.log('Food:\n'+food.x+' : ' + food.y)
 			}
 
@@ -192,11 +202,36 @@
 				return snake[0].x == food.x && snake[0].y == food.y;
 			}
 
+
 			$('#btn_newgame').click(function(){
 				initialize();
 				gameloop();
 				$('#new_game').attr('hidden', 'true');
 			})
+
+
+			function getMousePos(canvas, evt) {
+    			var rect = canvas.getBoundingClientRect();
+    			return {
+      				x: evt.clientX - rect.left,
+      				y: evt.clientY - rect.top
+    			};
+			}
+
+
+			$(canvas).click(function(e){
+				mousePos = getMousePos(canvas, e);
+				if (snake[0].x < mousePos.x && direction != KEYS.LEFT && direction != KEYS.RIGHT)
+					direction = KEYS.RIGHT;
+				else if (snake[0].x > mousePos.x && direction != KEYS.RIGHT && direction != KEYS.LEFT)
+					direction = KEYS.LEFT;
+				else if (snake[0].y < mousePos.y && direction != KEYS.DOWN && direction != KEYS.UP)
+					direction = KEYS.DOWN;
+				else if (snake[0].y > mousePos.y && direction != KEYS.UP && direction != KEYS.DOWN) 
+					direction = KEYS.UP;
+
+			})
+
 		})
 	</script>
 </body>
