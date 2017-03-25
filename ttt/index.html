@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="playground">
+  <div class="notification">x won!</div>
+  <div class="cells">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <button class="btn-play">Play</button>
+</div>
+<style>
+  *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 16px;
+}
+body{
+  background: #333;
+}
+.playground{
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.notification{
+  text-align: center;
+  font-size: 2rem;
+  background: #ad3d3d;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  width: 90%;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translatex(-50%);
+  opacity: 0;
+  transition: .7s;
+}
+.cells{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: .5s;
+}
+.cells-rotated{
+  transform: rotate(360deg);
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.cell{
+  width: 33.333%;
+  height: 33.333%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: #fff;
+  float: left;
+  text-transform: uppercase;
+  font-family: Arial;
+  font-size: 8rem;
+  display: flex;
+justify-content: center; /* align horizontal */
+align-items: center;
+}
+.btn-play{
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 3rem;
+  font-family: Tahoma;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s;
+  margin-top: 10px;
+}
+.btn-play:hover{
+  background: #000;
+  color: #ccc;
+  transform: scale(.9);
+}
+.btn-play:focus{
+  outline: none;
+}
+@media screen and (max-width: 770px){
+  
+  .playground{
+    width: 90%;
+    height: 75%;
+  }
+  .cell{
+    font-size: 7rem;
+  }
+
+}
+@media screen and (max-width: 570px){
+  .playground{
+    height: 55%;
+    width: 100%;
+  }
+    .cell{
+    font-size: 6rem;
+  }
+
+}
+@media screen and (max-width: 380px){
+  .playground{
+    height: 35%;
+  }
+  .cell{
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1500px){
+  .playground{
+    height: 75%;
+  }
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+var gameStarted = false;
+var firstPlayerMove = false;
+
+function markCell(cell, mark){
+  if (cell.text() == ''){
+    cell.text(mark);
+    return true;
+  }
+  return false;
+}
+function getCellMark(cellNumber){
+  return $('.cell:nth-of-type('+cellNumber+')').text();
+}
+function isWinner(mark){
+  for(let i=0; i<3;i++){
+    if (getCellMark(1+i*3) == mark && getCellMark(2+i*3) == mark && getCellMark(3+i*3) == mark)
+      return true;
+    if (getCellMark(1+i) == mark && getCellMark(4+i) == mark && getCellMark(7+i) == mark)
+      return true;
+  }
+  if (getCellMark(1) == mark && getCellMark(5) == mark && getCellMark(9) == mark)
+    return true;
+  if (getCellMark(3) == mark && getCellMark(5) == mark && getCellMark(7) == mark)
+    return true;
+  
+  return false;
+}
+function gameNotify(text){
+  $('.notification').text(text);
+  $('.notification').css('opacity', '1');
+}
+function gameNotifyHide(){
+  $('.notification').css('opacity', '0');
+}
+
+$(function(){
+  $('.btn-play').click(function(){
+    if ($('.cell').text() == '' && gameStarted) return;
+    $('.cell').text('');
+    $('.cells').toggleClass('cells-rotated');
+    gameStarted = true;
+    firstPlayerMove = true;
+    gameNotifyHide();
+  });
+  $('.cell').on('click', function(){
+    if (!gameStarted) return;
+    
+    let mark = firstPlayerMove ? 'x' : 'o';
+    if (!markCell($(this), mark)) return;
+    if(isWinner(mark)){
+      gameNotify(mark + ' won!');
+      gameStarted = false;
+    }
+    else 
+      firstPlayerMove = !firstPlayerMove;
+  });
+}); 
+</script>
+</body>
+</html>
