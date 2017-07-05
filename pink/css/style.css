@@ -1,0 +1,212 @@
+.page-header {
+  min-height: 460px;
+  background: url("../img/iphone-5-in-hand-png.png") no-repeat bottom left, url("../img/back-mobile@1x.jpg") no-repeat;
+  background-size: auto, 100% 100%;
+  overflow-x: hidden; }
+
+.page-header__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto; }
+  .page-header__wrapper::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.page-header__nav {
+  background: rgba(0, 0, 0, 0.3);
+  height: 50px;
+  padding-top: 20px;
+  position: relative;
+  transition: .3s background; }
+
+.page-header__nav--active {
+  background: #283645;
+  height: 49px;
+  border-bottom: 1px solid #000; }
+
+.page-header__items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100vw;
+  transform: translateX(100%);
+  transition: .3s transform; }
+  .page-header__items--active {
+    transform: translateX(0); }
+
+.page-header__item {
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000;
+  background: #283645;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff; }
+  .page-header__item a {
+    color: inherit;
+    text-decoration: none; }
+
+.page-header__logo {
+  float: left;
+  font-size: 0;
+  background: url("../img/logo-mobile.svg");
+  width: 75px;
+  height: 23px; }
+
+.page-header__toggle {
+  float: right;
+  vertical-align: middle;
+  background: url("../img/burger-mobile.svg") no-repeat;
+  width: 50px;
+  height: 25px; }
+
+.page-header__toggle--active {
+  background: url("../img/cross-mobile.svg") no-repeat;
+  width: 25px;
+  margin-left: 25px; }
+
+.download {
+  background: #1d2631;
+  padding: 30px 0; }
+
+.download__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center; }
+
+.btn {
+  display: block;
+  border-radius: 30px;
+  border: 3px solid #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; }
+
+.download__btn-download {
+  margin-bottom: 30px; }
+
+.download__platform {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 25px; }
+  .download__platform:last-child {
+    margin-right: 0; }
+
+.download__description {
+  margin: 0;
+  font-weight: 300;
+  color: #fff; }
+
+.features {
+  padding-top: 50px;
+  text-align: center; }
+
+.features__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.features__title {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 65px; }
+
+.features__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  padding: 55px 0 320px;
+  background: #f2f2f2 url("../img/iphone.png") bottom -43px center no-repeat; }
+  .features__list::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 100vw;
+    border-color: transparent transparent #f2f2f2 transparent; }
+
+.feature__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px; }
+
+.feature__description {
+  font-size: 14px;
+  margin-bottom: 45px; }
+
+.feature:last-child .feature__description {
+  margin-bottom: 0; }
+
+.reviews {
+  padding-top: 50px;
+  text-align: center; }
+
+.review__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px; }
+
+.review__description {
+  margin: 0;
+  font-size: 14px;
+  padding-bottom: 35px; }
+
+.slider {
+  overflow: hidden; }
+
+.slider__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 9999px;
+  transition: .5s margin-left; }
+  .slider__list::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.slider__item {
+  float: left;
+  max-width: 100vw; }
+
+.slider__pagination {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0; }
+
+.slider__toggle {
+  display: inline-block;
+  background: #bec2c7;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px; }
+  .slider__toggle--active {
+    border: 3px solid #283645; }
+  .slider__toggle:last-child {
+    margin-right: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0; }

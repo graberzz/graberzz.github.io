@@ -1,0 +1,40 @@
+.download {
+  background: #1d2631;
+  padding: 30px 0;
+}
+
+.download__wrapper {
+  @include container();
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  border-radius: 30px;
+  border: 3px solid #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.download__btn-download {
+  margin-bottom: 30px;
+}
+
+.download__platform {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download__description {
+  margin: 0;
+  font-weight: 300;
+  color: #fff;
+}

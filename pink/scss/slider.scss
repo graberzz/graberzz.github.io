@@ -1,0 +1,38 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider__list {
+  @include unstyled-list();
+  @include clearfix();
+  width: 9999px;
+  transition: .5s margin-left;
+}
+
+.slider__item {
+  float: left;
+  max-width: 100vw;
+}
+
+.slider__pagination {
+  @include unstyled-list();
+  text-align: center;
+  font-size: 0;
+}
+
+.slider__toggle {
+  display: inline-block;
+  background: #bec2c7;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  
+  &--active {
+    border: 3px solid #283645;
+  }
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'vars';
+@import 'mixins';
+@import 'page-header';
+@import 'download';
+@import 'features';
+@import 'reviews';
+@import 'slider';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}

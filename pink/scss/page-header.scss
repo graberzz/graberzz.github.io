@@ -1,0 +1,79 @@
+.page-header {
+  min-height: 460px;
+  background: url('../img/iphone-5-in-hand-png.png') no-repeat bottom left, 
+              url('../img/back-mobile@1x.jpg') no-repeat;
+  background-size: auto, 100% 100%;
+  overflow-x: hidden;
+}
+
+.page-header__wrapper {
+  @include container();
+  @include clearfix();
+}
+
+.page-header__nav {
+  background: rgba(0, 0, 0, .3);
+  height: 50px;
+  padding-top: 20px;
+  position: relative;
+  transition: .3s background;
+}
+
+.page-header__nav--active {
+  background: #283645;
+  height: 49px;
+  border-bottom: 1px solid #000;
+}
+
+.page-header__items {
+  @include unstyled-list();
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100vw;
+  transform: translateX(100%);
+  transition: .3s transform;
+  
+  &--active {
+    transform: translateX(0);
+  }
+}
+
+.page-header__item {
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000;
+  background: #283645;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.page-header__logo {
+  float: left;
+  font-size: 0;
+  background: url('../img/logo-mobile.svg');
+  width: 75px;
+  height: 23px;
+}
+
+.page-header__toggle {
+  float: right;
+  vertical-align: middle;
+  background: url('../img/burger-mobile.svg') no-repeat;
+  width: 50px;
+  height: 25px;
+}
+
+.page-header__toggle--active {
+  background: url('../img/cross-mobile.svg') no-repeat;
+  width: 25px;
+  margin-left: 25px;
+}
