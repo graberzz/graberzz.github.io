@@ -1,0 +1,1 @@
+var menuToggle=document.getElementsByClassName("header__menu-toggle")[0];menuToggle.addEventListener("click",function(){document.getElementsByClassName("header__nav")[0].classList.toggle("header__nav--visible"),this.classList.toggle("header__menu-toggle--active")});
