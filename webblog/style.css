@@ -1,0 +1,272 @@
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+	text-align: center;
+}
+header{
+	background: url(images/headbg.png) no-repeat;
+	background-size: cover;
+}
+.wrap{
+	width: 80%;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.head-nav{
+	background: rgba(0,0,0,.6);
+	color: rgba(255,255,255,.6);
+	text-align: center;
+}
+.head-nav:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.head-nav ul{
+	float: right;
+}
+.head-nav li{
+	display: inline-block;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 11px;
+	text-transform: uppercase;
+	position: relative;
+	padding: 40px;
+	cursor: pointer;
+}
+i.search{
+	display: inline-block;
+	background: url(images/search.png);
+	width: 11px;
+	height: 11px;
+	position: relative;
+	left: 10px;
+	cursor: pointer;
+}
+.head-nav li:hover{
+	background: rgba(0,0,0,.4);
+}
+.head-nav li:hover:after{
+	content: '';
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: #dd3f19;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.head-nav li:hover:before{
+	content: '';
+	display: table-cell;
+	height: 0;
+	width: 0;
+	border: 4px solid;
+	border-color: #dd3f19 transparent transparent transparent;
+	position: absolute;
+	bottom: -8px;
+	left: calc(50% - 4px);
+}
+.logo{
+	display: inline-block;
+	background: url(images/logo.png) no-repeat;
+	width: 168px;
+	height: 27px;
+	margin-top: 30px;
+}
+.left{
+	float: left;
+}
+.about{
+	text-align: center;
+	padding: 88px 0;
+}
+.about > h2{
+	color: #fff;
+	font-family: Corbel;
+	font-size: 48px;
+	text-transform: capitalize;
+}
+.about p{
+	color: rgba(255,255,255,.6);
+	font-size: 18px;
+}
+.btn{
+	border: 1px solid #adadad;
+	color: #adadad;
+	cursor: pointer;	
+}
+.categories{
+	display: inline-block;
+	padding: 13px 23px;
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+.btn:hover{
+	background: #adadad;
+	color: #fff;
+}
+.fa-cog{
+	margin-right: 5px;
+}
+.posts{
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
+.post{
+	display: inline-block;
+	margin-right: 31px;
+	margin-bottom: 60px;
+	vertical-align: top;
+	text-align: center;
+}
+.post:nth-of-type(){
+	margin-right: 0;
+}
+.post, .post > .category, .description{
+	border-bottom: 1px solid #e5e5e5;
+} 
+.post > h2{
+	font-size: 18px;
+	color: #333;
+	margin-top: 30px;
+}
+.description{
+	font-size: 12px;
+	color: #555;
+	padding: 25px 15px;
+}
+.post > *{
+	max-width: 300px;
+	overflow: hidden;
+}
+.category, .date, .comments{
+	font-size: 11px;
+	color: #adadad;
+}
+.category{
+	padding: 15px 5px;
+}
+.date, .comments{
+	display: inline-block;
+}
+.date{
+	margin-right: 15px;
+}
+.date:before{
+	font-family: FontAwesome;
+	content:"\f017";
+	margin-right: 5px;
+}
+.comments:before{
+	font-family: FontAwesome;
+	content:"\f086";
+	margin-right: 5px;
+}
+.comments:after{
+	content: ' Comments';
+}
+.load{
+	padding: 15px 0;
+	margin-bottom: 90px;
+}
+footer{
+	background: url('images/footerbg.png') no-repeat;
+	background-size: cover;
+}
+@media(max-width: 1490px){
+	.wrap{
+		width: 100%;
+	}
+	.logo.left{
+		float: none;
+	}
+	.head-nav ul{
+		float: none;
+	}
+}
+footer > p{
+	max-width: 600px;
+	margin: 0 auto;
+	color: rgba(195,195,195,.3);
+	padding: 30px 0;
+}
+@media(max-width: 485px){
+	.head-nav li{
+		display: block;
+	}
+	i.search{
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 10px;
+	}
+	.nav-footer{
+		margin-left: 0;
+	}
+}
+.socials{
+	border: 2px solid rgba(195,195,195,.15);
+	display: inline-block;
+}
+.socials li{
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	margin: 10px;
+	cursor: pointer;
+}
+.socials li:hover{
+	transform: scale(1.5);
+}
+.twitter{
+	background: url('images/twitter.svg');
+}
+.fb{
+	background: url('images/facebook.svg');
+}
+.linkedin{
+	background: url('images/linkedin.svg');
+}
+.dribbble{
+	background: url('images/dribbble.svg');
+}
+.pinterest{
+	background: url('images/pinterest.svg');
+}
+.tumblr{
+	background: url('images/tumblr.svg');
+}
+.behance{
+	background: url('images/behance.svg');
+}
+.vimeo{
+	background: url('images/vimeo.svg');
+}
+.bottom{
+	background: rgba(0,0,0,.1);
+	padding: 25px 0;
+	font-size: 12px;
+}
+.nav-footer, .nav-footer li{
+	display: inline-block;
+}
+.nav-footer{
+	margin-left: 45px;
+}
+.nav-footer li{
+	color: rgba(195,195,195, .6);
+	margin-right: 15px;		
+}
+.credits{
+	color: rgba(195,195,195, .3);
+}
+
