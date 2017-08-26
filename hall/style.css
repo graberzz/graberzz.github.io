@@ -1,0 +1,281 @@
+.hall {
+    position: relative;
+    height: 580px;
+    font-family: Arial;
+    overflow-x:  auto;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+     -ms-user-select: none; 
+         user-select: none; 
+                           
+}
+
+.hall * {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.legend {
+    padding: 3px 0;
+    width: 193px;
+    height: 86px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    left: 653px;
+}
+
+.legend__item {
+    position: static;
+    margin-bottom: 10px;
+}
+
+.legend__color {
+    position: static;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+#btn-select {
+    left: 82px;
+    top: 40px;
+    background: #888888;
+    border-radius: 5px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vip-balcony-left {
+    top: 90px;
+    left: 2px;
+    height: 430px;
+    width: 70px;
+    border: 1px solid #000;
+}
+
+.vip-left {
+    top: 90px;
+    left: 90px;
+    width: 120px;
+    height: 430px;
+    border: 1px solid #000;
+}
+
+.scene {
+    left: 220px;
+    width: 320px;
+    height: 135px;
+    line-height: 135px;
+    text-align: center;
+    color: #fff;
+    background: #9b9b9b;
+    font-size: 50px;
+}
+
+.dance-site {
+    left: 220px;
+    top: 140px;
+    width: 320px;
+    height: 360px;
+    padding-top: 140px;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    background: #7b6a58;
+}
+
+.vip-right {
+    top: 90px;
+    left: 550px;
+    width: 85px;
+    height: 430px;
+    border: 1px solid #000;
+}
+
+.vip-balcony-right {
+    top: 90px;
+    left: 655px;
+    width: 190px;
+    height: 430px;
+    border: 1px solid #000;
+}
+
+.bar {
+    top: 540px;
+    left: 150px;
+    width: 470px;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 35px;
+    background: #3d2113;
+}
+
+.vip-balcony-left__title {
+    bottom: -2px;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color: #acacac;
+    line-height: 1.1;
+}
+
+.vip-balcony-left__title span {
+    position: static;
+    font-size: 28px;
+}
+
+.vip-left__title {
+    bottom: 0;
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    color: #acacac;
+}
+
+.vip-left__title span {
+    position: static;
+    font-size: 28px;
+}
+
+.table {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.seat {
+    border-radius: 5px;
+    background: #3d2113;
+    text-align: center;
+    color: #c49964;
+    cursor: pointer;
+}
+
+.seat--selected {
+    background: lime;
+}
+.vip-balcony-left .seat {
+    width: 15px;
+    height: 15px;
+    left: 20px;
+    font-size: 12px;
+}
+
+.vip-balcony-left .table {
+    top: 70px;
+    left: 45px;
+    width: 15px;
+    height: 255px;
+}
+
+.vip-left .seat {
+    left: 7px;
+    width: 25px;
+    height: 15px;
+    font-size: 13px;
+}
+
+.vip-left .table {
+    left: 37px;
+    width: 20px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.vip-left .table--rotated {
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+.vip-left .table--rotated span {
+    left: 6px;
+    top: -12px;
+    transform: rotate(-45deg);
+}
+
+.vip-left .seat--rotated {
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    font-size: 12px;
+}
+
+.vip-left .seat--rotated span {
+    left: 4px;
+    top: -1px;
+    transform: rotate(-45deg);
+}
+
+.stairs {
+    left: 21px;
+    top: 328px;
+    width: 39px;
+    height: 42px;
+    background: url(stairs.png) no-repeat 0 0;
+    background-size: cover;
+}
+
+.vip-right__title {
+    bottom: 0;
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    color: #acacac;
+}
+
+.vip-right__title span {
+    position: static;
+    font-size: 28px;
+}
+
+.vip-right .table {
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.vip-right .seat {
+    left: 54px;
+    width: 25px;
+    height: 15px;
+    font-size: 13px;
+}
+
+.vip-balcony-right .seat {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+}
+
+.vip-balcony-right .stairs {
+    left: 10px;
+    top: 234px;
+    width: 35px;
+    height: 85px;
+}
+
+.vip-balcony-right__title {
+    bottom: 0;
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    color: #acacac;
+}
+
+.vip-balcony-right__title span {
+    position: static;
+    font-size: 28px;
+}
