@@ -1,9 +1,9 @@
 .hall {
     position: relative;
-    width: 860px;
+    max-width: 860px;
     height: 580px;
     font-family: Arial;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .hall * {
