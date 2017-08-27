@@ -17,11 +17,11 @@
 
 .legend {
     padding: 3px 0;
-    width: 193px;
+    width: 191px;
     height: 86px;
     border: 1px solid #666;
     border-radius: 3px;
-    left: 653px;
+    left: 655px;
 }
 
 .legend__item {
@@ -39,8 +39,8 @@
 }
 
 #btn-select {
-    left: 82px;
-    top: 40px;
+    left: 90px;
+    top: 11px;
     background: #ffa902;
     border-radius: 5px;
     padding: 10px 20px;
@@ -53,16 +53,16 @@
 .vip-balcony-left {
     top: 90px;
     left: 2px;
-    height: 430px;
+    height: 460px;
     width: 70px;
     border: 1px solid #000;
 }
 
 .vip-left {
-    top: 90px;
+    top: 60px;
     left: 90px;
     width: 120px;
-    height: 430px;
+    height: 490px;
     border: 1px solid #000;
 }
 
@@ -94,7 +94,7 @@
     top: 90px;
     left: 550px;
     width: 85px;
-    height: 430px;
+    height: 460px;
     border: 1px solid #000;
 }
 
@@ -102,14 +102,14 @@
     top: 90px;
     left: 655px;
     width: 190px;
-    height: 430px;
+    height: 460px;
     border: 1px solid #000;
 }
 
 .bar {
-    top: 540px;
-    left: 150px;
-    width: 470px;
+    top: 519px;
+    left: 220px;
+    width: 320px;
     height: 30px;
     color: #fff;
     line-height: 30px;
@@ -134,9 +134,10 @@
 
 .vip-left__title {
     bottom: 0;
+    right: 5px;
     width: 100%;
     font-size: 17px;
-    text-align: center;
+    text-align: right;
     color: #acacac;
 }
 
@@ -174,6 +175,8 @@
     left: 45px;
     width: 15px;
     height: 255px;
+    line-height: 255px;
+    font-size: 12px;
 }
 
 .vip-left .seat {
@@ -186,8 +189,8 @@
 .vip-left .table {
     left: 37px;
     width: 20px;
-    height: 45px;
-    line-height: 45px;
+    height: 20px;
+    line-height: 20px;
     font-size: 16px;
     text-align: center;
 }
@@ -200,8 +203,8 @@
 }
 
 .vip-left .table--rotated span {
-    left: 6px;
-    top: -12px;
+    left: 5px;
+    top: -1px;
     transform: rotate(-45deg);
 }
 
@@ -270,13 +273,14 @@
 
 .vip-balcony-right__title {
     bottom: 0;
+    right: 0px;
     width: 100%;
     font-size: 17px;
-    text-align: center;
+    text-align: right;
     color: #acacac;
 }
 
 .vip-balcony-right__title span {
     position: static;
-    font-size: 28px;
+    font-size: 26px;
 }
