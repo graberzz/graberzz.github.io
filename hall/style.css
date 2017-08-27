@@ -41,7 +41,7 @@
 #btn-select {
     left: 82px;
     top: 40px;
-    background: #888888;
+    background: #ffa902;
     border-radius: 5px;
     padding: 10px 20px;
     outline: none;
@@ -72,8 +72,9 @@
     height: 135px;
     line-height: 135px;
     text-align: center;
-    color: #fff;
-    background: #9b9b9b;
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
     font-size: 50px;
 }
 
@@ -86,7 +87,7 @@
     font-size: 35px;
     color: #fff;
     text-align: center;
-    background: #7b6a58;
+    background: #ffaa00;
 }
 
 .vip-right {
@@ -152,14 +153,14 @@
 
 .seat {
     border-radius: 5px;
-    background: #3d2113;
+    background: #a7e2a7;
     text-align: center;
-    color: #c49964;
+    color: #fff;
     cursor: pointer;
 }
 
 .seat--selected {
-    background: lime;
+    background: #80b604;
 }
 .vip-balcony-left .seat {
     width: 15px;
