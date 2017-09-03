@@ -152,7 +152,8 @@ body {
   vertical-align: top;
   margin-right: 40px; }
   .header__tel a {
-    font-size: 27px;
+    display: block;
+    font-size: 24px;
     font-weight: 800;
     color: #4a4a4a; }
   .header__tel span {
@@ -486,7 +487,7 @@ body {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       width: 210px;
-      height: 212px;
+      height: 210px;
       border: 5px solid #4cc2ff;
       border-radius: 50%; }
 
@@ -573,7 +574,6 @@ body {
   height: 485px; }
 
 .find-us__marker {
-  margin-top: -40px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   display: block;
@@ -639,6 +639,28 @@ body {
   background: #181818;
   text-align: center;
   color: #939393; }
+
+.footer__copyrights {
+  margin-bottom: 20px; }
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.footer__social {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s; }
+  .footer__social:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
 
 .popup {
   opacity: 0;
@@ -742,8 +764,26 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .header__call-btn,
+  .header__logo {
+    margin-right: 0; }
   .header__subheading {
+    margin-top: 15px;
+    padding-left: 0;
+    padding-top: 15px;
+    border-left: none;
+    border-top: dashed 1px #939393; }
+  .header__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__call-btn {
     display: none; }
   .main__address {
     margin-bottom: 20px; }
