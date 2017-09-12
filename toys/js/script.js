@@ -1,1 +1,1 @@
-var slider=tns({container:".main-slider__list",controlsContainer:".main-slider__arrows",navContainer:".main-slider__dots",items:1,slideBy:"page",auto:!0});
+var slider=tns({container:".main-slider__list",controlsContainer:".main-slider__arrows",navContainer:".main-slider__dots",items:1,slideBy:"page",auto:!0});$(document).ready(function(){$(".product-card__gallery").lightSlider({gallery:!0,thumbItem:4,item:1,loop:!0,controls:!0,currentPagerPosition:"middle"})});
